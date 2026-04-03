@@ -1,0 +1,105 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|c:\\users\\omsglobaltech\\desktop\\example\\calendarevent\\calendarevent\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|solutionrelative:calendarevent\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|c:\\users\\omsglobaltech\\desktop\\example\\calendarevent\\calendarevent\\views\\calendarevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|solutionrelative:calendarevent\\views\\calendarevent\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|c:\\users\\omsglobaltech\\desktop\\example\\calendarevent\\calendarevent\\controllers\\calendareventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|solutionrelative:calendarevent\\controllers\\calendareventcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|c:\\users\\omsglobaltech\\desktop\\example\\calendarevent\\calendarevent\\controllers\\calendareventapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|solutionrelative:calendarevent\\controllers\\calendareventapi.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|c:\\users\\omsglobaltech\\desktop\\example\\calendarevent\\calendarevent\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3852823C-3D32-699E-064E-B15BF8DB0B3C}|CalendarEvent\\CalendarEvent.csproj|solutionrelative:calendarevent\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "CalendarEvent\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "CalendarEvent\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAADAAAAAAAAAAAAAAwEgAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-03T05:14:17.122Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Views\\CalendarEvent\\Index.cshtml",
+              "RelativeDocumentMoniker": "CalendarEvent\\Views\\CalendarEvent\\Index.cshtml",
+              "ToolTip": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Views\\CalendarEvent\\Index.cshtml",
+              "RelativeToolTip": "CalendarEvent\\Views\\CalendarEvent\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-04-03T05:14:09.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "CalendarEvent\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "CalendarEvent\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAABcAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T05:03:24.832Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalendarEventController.cs",
+              "DocumentMoniker": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Controllers\\CalendarEventController.cs",
+              "RelativeDocumentMoniker": "CalendarEvent\\Controllers\\CalendarEventController.cs",
+              "ToolTip": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Controllers\\CalendarEventController.cs",
+              "RelativeToolTip": "CalendarEvent\\Controllers\\CalendarEventController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T05:03:22.68Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CalendarEventApi.cs",
+              "DocumentMoniker": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Controllers\\CalendarEventApi.cs",
+              "RelativeDocumentMoniker": "CalendarEvent\\Controllers\\CalendarEventApi.cs",
+              "ToolTip": "C:\\Users\\omsGlobaltech\\Desktop\\Example\\CalendarEvent\\CalendarEvent\\Controllers\\CalendarEventApi.cs",
+              "RelativeToolTip": "CalendarEvent\\Controllers\\CalendarEventApi.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwBcAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-03T05:03:15.711Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

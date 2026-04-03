@@ -1,0 +1,203 @@
+﻿<section class="vh-100" style="background-color: #eee;">
+    <div class="container h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col-lg-12 col-xl-11">
+                <div class="card text-black" style="border-radius: 25px;">
+                    <div class="card-body p-md-5">
+                        <div class="row justify-content-center">
+                            <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Sign up</p>
+
+                                <form class="mx-1 mx-md-4">
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-user fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input type="text" id="form3Example1c" class="form-control" />
+                                            <label class="form-label" for="form3Example1c">Your Name</label>
+                                            <div>
+                                            <span class="small text-danger" style="display: none;" id="nameError"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input type="password" id="form3Example4c" class="form-control" />
+                                            <label class="form-label" for="form3Example4c">Password</label>
+                                            <div>
+                                            <span class="small text-danger" style="display: none;" id="passwordError"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <i class="fas fa-key fa-lg me-3 fa-fw"></i>
+                                        <div data-mdb-input-init class="form-outline flex-fill mb-0">
+                                            <input type="password" id="form3Example4cd" class="form-control" />
+                                            <label class="form-label" for="form3Example4cd">Repeat your password</label>
+                                            <div>
+                                                <span class="small text-danger" style="display: none;" id="confirmPasswordError"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-check d-flex flex-column align-items-left mb-5">
+
+                                        <div>
+                                            <input class="form-check-input me-2" type="checkbox" id="form2Example3c" />
+
+                                            <label class="form-check-label" for="form2Example3c">
+                                                I agree all statements in <a href="#!">Terms of service</a>
+                                            </label>
+                                        </div>
+
+                                        <span class="small text-danger mt-1" style="display: none;" id="checkConditionError"></span>
+
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-lg" id="registerbtn">Register</button>
+                                    </div>
+
+                                </form>
+
+                            </div>
+                            <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                                <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                                     class="img-fluid" alt="Sample image">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script asp-append-version="true">
+    let registerbtn=document.getElementById("registerbtn");
+
+    let inputName=document.getElementById("form3Example1c");
+    let nameError=document.getElementById("nameError");
+
+    let inputPassword=document.getElementById("form3Example4c");
+    let passwordError=document.getElementById("passwordError");
+   
+    let inputConfirmPassword = document.getElementById("form3Example4cd");
+    let confirmPasswordError=document.getElementById("confirmPasswordError");
+
+    let checkCondition=document.getElementById("form2Example3c");
+    let checkConditionError=document.getElementById("checkConditionError");
+
+    function ClearTextField(){
+    inputName.value = "";
+    inputPassword.value = "";
+    inputConfirmPassword.value = "";
+
+    nameError.style.display="none";
+    passwordError.style.display="none";
+    confirmPasswordError.style.display="none";
+    checkConditionError.style.display="none";
+    checkCondition.checked = false;
+    }
+
+    registerbtn.addEventListener('click',async function(){
+        debugger;
+    nameError.style.display="none";
+    passwordError.style.display="none";
+    confirmPasswordError.style.display="none";
+
+        let isNameValid=true;
+        let isPasswordValid=true;
+        let isConfirmPasswordValid=true;
+    let isCheckConditionValid =true;
+
+        if (inputName.value.trim() == ""){
+            nameError.textContent="Name is Required";
+            isNameValid=false;
+        }
+        else if(inputName.value.trim().length <3){
+           nameError.textContent="Name should be 3 char long";
+            isNameValid=false;
+        }
+    let passwordPattern =
+    /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@@!%*?&])[A-Za-z\d@@!%*?&]{8,}$/;
+
+        if (inputPassword.value.trim() == ""){
+            passwordError.textContent="Password is Required";
+            isPasswordValid=false;
+        }
+        else if(!passwordPattern.test(inputPassword.value.trim())){
+           passwordError.textContent="Invalid Password format";
+            isPasswordValid=false;
+        }
+
+    if (inputPassword.value.trim() != inputConfirmPassword.value.trim())
+    {
+        confirmPasswordError.textContent="Confirm password do not match with password"
+        isConfirmPasswordValid=false;
+    }
+        if (!isNameValid) nameError.style.display="inline";
+        if (!isPasswordValid) passwordError.style.display="inline";
+        if (!isConfirmPasswordValid) confirmPasswordError.style.display="inline";
+
+        if(!checkCondition.checked){
+        checkConditionError.textContent="Plz check terms and condition";
+        checkConditionError.style.display="inline";
+    isCheckConditionValid = false;
+        }
+    if (!(isNameValid && isPasswordValid && isConfirmPasswordValid && isCheckConditionValid )){
+          return;
+        }
+        let userData;
+
+        if (isNameValid && isPasswordValid && isConfirmPasswordValid){
+             userData={
+                name:inputName.value,
+                password: inputPassword.value,
+                confirmPassword: inputConfirmPassword.value
+            };
+        }
+
+        try{
+    let response=await fetch("http://localhost:5001/api/UserAccount/register",{
+                method: 'POST',
+                headers: {
+                    "Content-Type":"application/json"
+                },
+                body:JSON.stringify(userData)
+            })
+
+            let result;
+
+            try{
+                result = await response.json();
+                if (result.success){
+                    alert("Registration succes");
+                    ClearTextField();
+                }
+                else{
+                    nameError.textContent = result.message;
+                    nameError.style.display = "inline";
+                }
+            }
+            catch{
+                let text = await response.text();
+                console.error("Server returned non-JSON response:", text);
+
+                alert("Unexpected server response");
+            }
+        }
+        
+        catch(error){
+                alert("failed:",error);
+                console.error("APIError",error);
+        }
+    })
+    
+   
+</script>

@@ -1,0 +1,111 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CalendarEvent</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/CalendarEvent.styles.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="d-flex flex-column bg-dark text-white position-fixed" style="width: 250px; height: 100vh;">
+        <h5 class="text-center p-3">KtmPOS</h5>
+        <hr class="border-light mx-3" />
+
+        @* Home view *@
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link text-white" data-bs-toggle="collapse" href="#homeSubMenu" role="button" aria-expanded="false" aria-controls="homeSubMenu">
+                        Home
+                    </a>
+                    <div class="collapse" id="homeSubMenu">
+                        <ul class="nav flex-column ms-3">
+                            <li class="nav-item">
+                                <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+            @* calendar *@
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link text-white" data-bs-toggle="collapse" href="#inventorySubMenu" role="button" aria-expanded="false" aria-controls="homeSubMenu">
+                    Events
+                </a>
+                <div class="collapse" id="inventorySubMenu">
+                    <ul class="nav flex-column ms-3">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="CalendarEvent" asp-action="Index">See Calendar</a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+        @* login *@
+        ﻿<ul class="nav flex-column mt-auto">
+            <li class="nav-item">
+                <a class="nav-link text-white" data-bs-toggle="collapse" href="#accountSubMenu" role="button" aria-expanded="false" aria-controls="homeSubMenu">
+                    Account
+                </a>
+                <div class="collapse" id="accountSubMenu">
+                    <ul class="nav flex-column ms-3">
+                        @if (User.Identity.IsAuthenticated)
+                            {
+                                
+                            <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="UserAccount" asp-action="SignUp">Register</a>
+                                </li>
+                            
+                            <li class="nav-item">
+                                <form asp-area="" asp-controller="Account" asp-action="Logout" method="post">
+                                    <button type="submit" class="btn btn-link nav-link text-start text-white" style="text-decoration: none;">Logout</button>
+                                </form>
+                            </li>
+                            }
+                            else
+                            {
+                                
+                            <li class="nav-item">
+                            <a class="nav-link text-white" asp-area="" asp-controller="UserAccount" asp-action="Login">Login</a>
+                            </li>
+                            }
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+        </div>
+    <div class="ms-250" style="margin-left: 250px; padding: 1rem;">
+        <!-- Card for content -->
+        <div class="card shadow-sm">
+            <div class="card-body">
+
+                <div class="alert-container">
+                    <div id="bs-success-container" class="alert alert-success alert-dismissible fade show d-none" role="alert">
+                        <span id="bs-success-msg"></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div id="bs-error-container" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                        <span id="bs-error-msg"></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    <div id="bs-warning-container" class="alert alert-danger alert-dismissible fade show d-none" role="alert">
+                        <span id="bs-warning-msg"></span>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                </div>
+                <main role="main" class="pb-3">
+                    @RenderBody()
+                </main>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
